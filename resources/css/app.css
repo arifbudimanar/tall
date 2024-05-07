@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background-color: #282b31;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #52525b;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #4338ca;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background-color: #e4e4e7;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #a1a1aa;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #a5b4fc;
+    }
+}
+
+.trix-button-row .trix-button-group {
+    border-color: var(--trix-button-group-border);
+    overflow: hidden;
+}
+
+.trix-button-row .trix-button-group .trix-active {
+    border-color: var(--trix-button-active-background);
+}
+
+.trix-button-row .trix-button-group .trix-button {
+    background-color: var(--trix-button-background);
+    border: 0px;
+}
+
+.trix-button-row .trix-button-group .trix-button.trix-active {
+    background-color: var(--trix-button-active-background);
+}
+
+:root {
+    --trix-button-group-border: #e4e4e7;
+    --trix-button-background: #f4f4f5;
+    --trix-button-border: #e4e4e7;
+    --trix-button-active-background: #c7d2fe;
+    --trix-content-background: #e4e4e7;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --trix-button-group-border: #27272a;
+        --trix-button-background: #f4f4f5;
+        --trix-button-border: #27272a;
+        --trix-button-active-background: #3730a3;
+        --trix-content-background: #27272a;
+    }
+}
