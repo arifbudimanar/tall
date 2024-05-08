@@ -13,8 +13,14 @@
         </x-slot:trigger>
 
         <x-slot:content>
-            <x-dropdown.category :title="__('Filter')" :divider="false" class="bg-red-600" />
-            <div class="px-4 pb-4 space-y-2">
+            {{-- <x-dropdown.category :title="__('Filter')" :divider="false" class="bg-red-600" /> --}}
+            <div class="block px-4 py-2">
+                <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
+                    {{ __('Filter') }}
+                </div>
+            </div>
+            <x-divider></x-divider>
+            <div class="px-4 py-4 space-y-2">
                 <div class="justify-between gap-4 lg:flex">
                     <p class="flex items-center whitespace-nowrap">{{ __('Email Status') }}</p>
                     <x-input.select wire:model.lazy="email_status" id="filterEmailStatus" name="filterEmailStatus"

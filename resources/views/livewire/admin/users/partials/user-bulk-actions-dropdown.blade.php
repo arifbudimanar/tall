@@ -14,7 +14,13 @@
         </x-slot:trigger>
 
         <x-slot:content>
-            <x-dropdown.category :title="__('Actions')" divider="false" />
+            {{-- <x-dropdown.category :title="__('Actions')" divider="false" /> --}}
+            <div class="block px-4 py-2">
+                <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
+                    {{ __('Actions') }}
+                </div>
+            </div>
+            <x-divider></x-divider>
 
             <x-dropdown.button :title="__('Delete Users')" wire:click="confirmUsersDeletion">
                 <x-slot:icon>
