@@ -1,10 +1,21 @@
-@props(['title'])
+@props(['title', 'type' => 'info'])
+
+@php
+    $typeClasses = match ($type) {
+        'info' => 'hover:bg-zinc-100 dark:hover:bg-zinc-950 focus:bg-zinc-100 dark:focus:bg-zinc-950',
+        'success' => 'hover:bg-indigo-100 dark:hover:bg-indigo-950 focus:bg-indigo-100 dark:focus:bg-indigo-950',
+        'warning' => 'hover:bg-red-100 dark:hover:bg-red-950 focus:bg-red-100 dark:focus:bg-red-950',
+        default => $type,
+    };
+@endphp
 
 <button
     {{ $attributes->merge([
         'type' => 'button',
         'class' =>
-            'w-full flex items-center px-4 py-2 text-left text-sm leading-5 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-950 focus:bg-zinc-100 dark:focus:bg-zinc-950',
+            $typeClasses .
+            ' w-full flex items-center px-4 py-2 text-left text-sm leading-5 text-zinc-700 dark:text-zinc-300',
+        $type,
     ]) }}>
 
     @isset($icon)

@@ -52,7 +52,8 @@
                         <x-button.secondary :title="__('Reset')" loading="clearFilters" wire:click="clearFilters"
                             class="whitespace-nowrap">
                             <x-slot:icon>
-                                <x-icon.filter-x class="w-5 h-5" />
+                                {{-- <x-icon.filter-x class="w-5 h-5" /> --}}
+                                <x-icon.arrow-path class="w-5 h-5" />
                             </x-slot:icon>
                         </x-button.secondary>
                     </div>

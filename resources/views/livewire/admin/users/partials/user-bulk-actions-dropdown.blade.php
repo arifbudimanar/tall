@@ -22,7 +22,7 @@
             </div>
             <x-divider></x-divider>
 
-            <x-dropdown.button :title="__('Delete Users')" wire:click="confirmUsersDeletion">
+            <x-dropdown.button type="warning" :title="__('Delete Users')" wire:click="confirmUsersDeletion">
                 <x-slot:icon>
                     <x-icon.trash class="w-5 h-5" />
                 </x-slot:icon>
