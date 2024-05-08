@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12592d76241ddf6dd7eb8e939c17c685",
+    "content-hash": "836fedc64b17fb5849157c3bd9d233e1",
     "packages": [
         {
             "name": "brick/math",
@@ -2249,16 +2249,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.4.12",
+            "version": "v3.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "54dd265c17f7b5200627eb9690590e7cbbad1027"
+                "reference": "c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/54dd265c17f7b5200627eb9690590e7cbbad1027",
-                "reference": "54dd265c17f7b5200627eb9690590e7cbbad1027",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0",
+                "reference": "c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0",
                 "shasum": ""
             },
             "require": {
@@ -2268,16 +2268,15 @@
                 "illuminate/validation": "^10.0|^11.0",
                 "league/mime-type-detection": "^1.9",
                 "php": "^8.1",
-                "symfony/console": "^6.0|^7.0",
                 "symfony/http-kernel": "^6.2|^7.0"
             },
             "require-dev": {
                 "calebporzio/sushi": "^2.1",
-                "laravel/framework": "^10.15.0|^11.0",
+                "laravel/framework": "^10.0|^11.0",
                 "laravel/prompts": "^0.1.6",
                 "mockery/mockery": "^1.3.1",
-                "orchestra/testbench": "^8.21.0|^9.0",
-                "orchestra/testbench-dusk": "^8.24|^9.1",
+                "orchestra/testbench": "8.20.0|^9.0",
+                "orchestra/testbench-dusk": "8.20.0|^9.0",
                 "phpunit/phpunit": "^10.4",
                 "psy/psysh": "^0.11.22|^0.12"
             },
@@ -2313,7 +2312,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.4.12"
+                "source": "https://github.com/livewire/livewire/tree/v3.4.9"
             },
             "funding": [
                 {
@@ -2321,7 +2320,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-02T17:10:37+00:00"
+            "time": "2024-03-14T14:03:32+00:00"
         },
         {
             "name": "masmerise/livewire-toaster",
@@ -7584,16 +7583,16 @@
         },
         {
             "name": "laravel-lang/actions",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/actions.git",
-                "reference": "dc4f19aa5c6898854a214257cc1927d2f18bcd91"
+                "reference": "363e07c87d9d78470e27534c4b7593f41388f711"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/actions/zipball/dc4f19aa5c6898854a214257cc1927d2f18bcd91",
-                "reference": "dc4f19aa5c6898854a214257cc1927d2f18bcd91",
+                "url": "https://api.github.com/repos/Laravel-Lang/actions/zipball/363e07c87d9d78470e27534c4b7593f41388f711",
+                "reference": "363e07c87d9d78470e27534c4b7593f41388f711",
                 "shasum": ""
             },
             "require": {
@@ -7645,9 +7644,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Laravel-Lang/actions/issues",
-                "source": "https://github.com/Laravel-Lang/actions/tree/1.8.0"
+                "source": "https://github.com/Laravel-Lang/actions/tree/1.8.1"
             },
-            "time": "2024-05-05T17:50:13+00:00"
+            "time": "2024-05-06T08:48:33+00:00"
         },
         {
             "name": "laravel-lang/attributes",
