@@ -2,6 +2,7 @@
     'align' => 'right',
     'width' => 'max',
     'autoClose' => true,
+    'title' => null,
 ])
 
 @php
@@ -42,6 +43,12 @@
         <div
             class="overflow-y-hidden bg-white border border-transparent rounded-md border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900
             {{ $align === 'top-left' || $align === 'top-right' ? 'mb-2' : 'mt-2' }}">
+            @isset($title)
+                <div class="block px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300">
+                    {{ $title }}
+                </div>
+                <x-divider></x-divider>
+            @endisset
             {{ $content }}
         </div>
     </div>

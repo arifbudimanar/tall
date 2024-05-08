@@ -10,13 +10,14 @@
             It also have smaller component like dropdown link, dropdown button and dropdown category.
         </p>
         <ol class="mt-4 font-semibold">
+            <li>title : props / slot - nullable</li>
             <li>align : props (default = right) - nullable</li>
             <li>width : props (default = max) - nullable</li>
             <li>trigger : slot - required</li>
             <li>content : slot - required</li>
         </ol>
         <div class="flex justify-between mt-4">
-            <x-dropdown align="top-left">
+            <x-dropdown align="top-left" :title="__('Top Left')">
                 <x-slot:trigger>
                     <x-button.secondary class="flex items-center">
                         <span>
@@ -29,12 +30,7 @@
                 </x-slot:trigger>
 
                 <x-slot:content>
-                    <div class="block px-4 py-2">
-                        <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
-                            {{ __('Top Left') }}
-                        </div>
-                    </div>
-                    <x-dropdown.category :title="__('Dropdown Category with Divider')" />
+                    <x-dropdown.category divider="false" :title="__('Dropdown Category with Divider')" />
                     <x-dropdown.button :title="__('Dropdown Button')" wire:click="dropdownButtonTopLeft" />
                     <x-dropdown.button :title="__('Dropdown Button with Icon')" wire:click="dropdownButtonTopLeft">
                         <x-slot:icon>
@@ -50,7 +46,7 @@
                     </x-dropdown.link>
                 </x-slot:content>
             </x-dropdown>
-            <x-dropdown align="top-right">
+            <x-dropdown align="top-right" :title="__('Top Right')">
                 <x-slot:trigger>
                     <x-button.secondary class="flex items-center">
                         {{ __('Top Right') }}
@@ -63,12 +59,7 @@
                 </x-slot:trigger>
 
                 <x-slot:content>
-                    <div class="block px-4 py-2">
-                        <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
-                            {{ __('Top Right') }}
-                        </div>
-                    </div>
-                    <x-dropdown.category :title="__('Dropdown Category with Divider')" />
+                    <x-dropdown.category divider="false" :title="__('Dropdown Category with Divider')" />
                     <x-dropdown.button :title="__('Dropdown Button')" wire:click="dropdownButtonTopRight" />
                     <x-dropdown.button :title="__('Dropdown Button with Icon')" wire:click="dropdownButtonTopRight">
                         <x-slot:icon>
@@ -86,7 +77,7 @@
             </x-dropdown>
         </div>
         <div class="flex justify-between mt-2">
-            <x-dropdown align="left">
+            <x-dropdown align="left" :title="__('Bottom Left')">
                 <x-slot:trigger>
                     <x-button.secondary class="flex items-center">
                         <span>
@@ -99,12 +90,7 @@
                 </x-slot:trigger>
 
                 <x-slot:content>
-                    <div class="block px-4 py-2">
-                        <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
-                            {{ __('Bottom Left') }}
-                        </div>
-                    </div>
-                    <x-dropdown.category :title="__('Dropdown Category with Divider')" />
+                    <x-dropdown.category divider="false" :title="__('Dropdown Category with Divider')" />
                     <x-dropdown.button :title="__('Dropdown Button')" wire:click="dropdownButtonBottomLeft" />
                     <x-dropdown.button :title="__('Dropdown Button with Icon')" wire:click="dropdownButtonBottomLeft">
                         <x-slot:icon>
@@ -120,7 +106,7 @@
                     </x-dropdown.link>
                 </x-slot:content>
             </x-dropdown>
-            <x-dropdown align="right">
+            <x-dropdown align="right" :title="__('Bottom Right')">
                 <x-slot:trigger>
                     <x-button.secondary class="flex items-center">
                         {{ __('Bottom Right') }}
@@ -133,12 +119,7 @@
                 </x-slot:trigger>
 
                 <x-slot:content>
-                    <div class="block px-4 py-2">
-                        <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
-                            {{ __('Bottom Right') }}
-                        </div>
-                    </div>
-                    <x-dropdown.category :title="__('Dropdown Category with Divider')" />
+                    <x-dropdown.category divider="false" :title="__('Dropdown Category with Divider')" />
                     <x-dropdown.button :title="__('Dropdown Button')" wire:click="dropdownButtonBottomRight" />
                     <x-dropdown.button :title="__('Dropdown Button with Icon')" wire:click="dropdownButtonBottomRight">
                         <x-slot:icon>

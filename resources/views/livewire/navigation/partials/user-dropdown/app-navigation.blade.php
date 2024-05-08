@@ -1,4 +1,13 @@
 <x-dropdown>
+    <x-slot:title>
+        <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
+            {{ Auth::user()->name }}
+        </div>
+
+        <div class="text-xs truncate text-zinc-600 dark:text-zinc-400">
+            {{ Auth::user()->email }}
+        </div>
+    </x-slot:title>
     <x-slot:trigger>
         <x-button.muted class="flex items-center">
             {{ Auth::user()->first_name }}
@@ -11,18 +20,8 @@
     </x-slot:trigger>
 
     <x-slot:content>
-        <div class="block px-4 py-2">
-            <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
-                {{ Auth::user()->name }}
-            </div>
-
-            <div class="text-xs truncate text-zinc-600 dark:text-zinc-400">
-                {{ Auth::user()->email }}
-            </div>
-        </div>
-
         {{-- Dropdown navigation --}}
-        <x-dropdown.category :title="__('Navigation')" />
+        <x-dropdown.category divider="false" :title="__('Navigation')" />
 
         <x-dropdown.link :href="route('home')" :title="__('Home')" wire:navigate>
             <x-slot:icon>

@@ -1,5 +1,5 @@
 <div class="flex gap-2 mt-4 w-min">
-    <x-dropdown align="left">
+    <x-dropdown align="left" :title="__('Actions')">
         <x-slot:trigger>
             <span class="inline-flex rounded-md">
                 <x-button.secondary class="flex items-center whitespace-nowrap">
@@ -14,14 +14,6 @@
         </x-slot:trigger>
 
         <x-slot:content>
-            {{-- <x-dropdown.category :title="__('Actions')" divider="false" /> --}}
-            <div class="block px-4 py-2">
-                <div class="text-sm truncate text-zinc-700 dark:text-zinc-300">
-                    {{ __('Actions') }}
-                </div>
-            </div>
-            <x-divider></x-divider>
-
             <x-dropdown.button type="warning" :title="__('Delete Users')" wire:click="confirmUsersDeletion">
                 <x-slot:icon>
                     <x-icon.trash class="w-5 h-5" />
