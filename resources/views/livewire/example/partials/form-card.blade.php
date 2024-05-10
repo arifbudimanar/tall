@@ -86,6 +86,20 @@
             <x-input.error for="textarea" class="mt-2" />
         </div>
 
+        {{-- Filepond Single --}}
+        {{-- <div class="max-w-lg">
+            <x-input.filepond name="filepondSingle" :label="__('Filepond Single')" wire:model="filepondSingle" validate required
+                accept="image/png, image/jpeg" size="4mb" />
+            <x-input.error for="filepondSingle" class="mt-2" />
+        </div> --}}
+
+        {{-- Filepond Multiple --}}
+        {{-- <div class="max-w-lg">
+            <x-input.filepond name="filepondMultiple" :label="__('Filepond Multiple')" wire:model="filepondMultiple" multiple validate
+                preview preview-max="200" accept="image/png, image/jpeg" size="4mb" number="4" />
+            <x-input.error for="filepondMultiple" class="mt-2" />
+        </div> --}}
+
         {{-- Rich text --}}
         <div>
             <x-input.label for="richtext" :value="__('Rich Text')" required />

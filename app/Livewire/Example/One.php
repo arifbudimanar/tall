@@ -5,10 +5,13 @@ namespace App\Livewire\Example;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Masmerise\Toaster\Toaster;
 
 class One extends Component
 {
+    use WithFileUploads;
+
     public string $text = '';
 
     public ?int $number = null;
@@ -27,6 +30,10 @@ class One extends Component
 
     public ?string $richtext = '';
 
+    // public string $filepondSingle = '';
+
+    // public array $filepondMultiple = [];
+
     public function someFunction(): void
     {
         sleep(1);
@@ -44,6 +51,8 @@ class One extends Component
             'checkbox' => 'required|accepted',
             'textarea' => 'required|min:5',
             'richtext' => 'required|min:10',
+            // 'filepondSingle' => 'required',
+            // 'filepondMultiple' => 'required',
         ]);
         Toaster::success('Submited!');
         Toaster::info('Text: '.$this->text.'');
@@ -55,8 +64,20 @@ class One extends Component
         Toaster::info('Checkbox: '.$this->checkbox.'');
         Toaster::info('Textarea: '.$this->textarea.'');
         Toaster::info('Richtext: '.$this->richtext.'');
+        // Toaster::info('Filepond Single: '.$this->filepondSingle.'');
+        // Toaster::info('Filepond Multiple: '.json_encode($this->filepondMultiple).'');
         $this->reset([
-            'text', 'number', 'email', 'password', 'date', 'select', 'checkbox', 'textarea', 'richtext',
+            'text',
+            'number',
+            'email',
+            'password',
+            'date',
+            'select',
+            'checkbox',
+            'textarea',
+            'richtext',
+            // 'filepondSingle',
+            // 'filepondMultiple',
         ]);
     }
 
