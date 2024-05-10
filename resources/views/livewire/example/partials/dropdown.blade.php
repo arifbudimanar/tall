@@ -13,6 +13,7 @@
             <li>title : props / slot - nullable</li>
             <li>align : props (default = right) - nullable</li>
             <li>width : props (default = max) - nullable</li>
+            <li>autoClose : props (default = true) - nullable</li>
             <li>trigger : slot - required</li>
             <li>content : slot - required</li>
         </ol>
