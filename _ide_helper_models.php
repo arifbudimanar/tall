@@ -54,8 +54,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereGoogleName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereGoogleRefreshToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereGoogleToken($value)
+ * @method static Builder|User search(string $search)
  * @mixin \Eloquent
- * @method static \Illuminate\Database\Eloquent\Builder|User search(string $search)
  */
 	class User extends \Eloquent implements \Illuminate\Contracts\Auth\MustVerifyEmail {}
 }

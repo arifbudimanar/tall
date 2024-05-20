@@ -77,7 +77,6 @@ class Create extends Component
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
-            'email_verified_at' => now(),
             'github_id' => $this->github_id ?? null,
             'github_name' => $this->github_name ?? null,
             'github_token' => $this->github_token ?? null,
