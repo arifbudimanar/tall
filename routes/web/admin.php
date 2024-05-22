@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 // Admin
 Route::prefix('admin')
     ->name('admin.')
-    ->middleware('auth', 'password.confirm')
+    ->middleware('auth', 'verified.email', 'password.confirm')
     ->group(function () {
         Route::get('/dashboard', Admin\Dashboard::class)
             ->name('dashboard');

@@ -57,6 +57,7 @@ class Edit extends Component
             $this->user->forceFill([
                 'email_verified_at' => null,
             ])->save();
+            session()->forget('auth.password_confirmed_at');
         }
         if ($this->name === $this->user->name && $this->email === $this->user->email) {
             Toaster::info('Nothing changed.');
