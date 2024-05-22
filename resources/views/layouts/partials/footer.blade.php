@@ -54,7 +54,7 @@
                                 <li>
                                     <a href="{{ route('user.setting') }}" wire:navigate
                                         class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 focus:text-indigo-600 dark:focus:text-indigo-400 focus:outline-none">
-                                        {{ __('Setting') }}
+                                        {{ __('Settings') }}
                                     </a>
                                 </li>
                                 <li>

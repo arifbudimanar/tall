@@ -44,7 +44,7 @@
             </x-slot:icon>
         </x-dropdown.link>
 
-        <x-dropdown.link :href="route('user.setting')" :title="__('Setting')" wire:navigate>
+        <x-dropdown.link :href="route('user.setting')" :title="__('Settings')" wire:navigate>
             <x-slot:icon>
                 <x-icon.adjustments-horizontal class="w-5 h-5" />
             </x-slot:icon>
