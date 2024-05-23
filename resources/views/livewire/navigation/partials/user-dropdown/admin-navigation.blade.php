@@ -54,7 +54,7 @@
         <x-dropdown.category :title="__('Authentication')" />
 
         @if (session()->has('auth.password_confirmed_at'))
-            <x-dropdown.button :title="__('Disable Admin Mode')" wire:click="disableAdminMode">
+            <x-dropdown.button type="warning" :title="__('Disable Admin Mode')" wire:click="disableAdminMode">
                 <x-slot:icon>
                     <x-icon.no-symbol class="w-5 h-5" />
                 </x-slot:icon>

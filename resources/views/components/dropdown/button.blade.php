@@ -4,7 +4,8 @@
     $typeClasses = match ($type) {
         'info' => 'hover:bg-zinc-100 dark:hover:bg-zinc-950 focus:bg-zinc-100 dark:focus:bg-zinc-950',
         'success' => 'hover:bg-indigo-100 dark:hover:bg-indigo-950 focus:bg-indigo-100 dark:focus:bg-indigo-950',
-        'warning' => 'hover:bg-red-100 dark:hover:bg-red-950 focus:bg-red-100 dark:focus:bg-red-950',
+        'warning' => 'hover:bg-orange-100 dark:hover:bg-orange-950 focus:bg-orange-100 dark:focus:bg-orange-950',
+        'danger' => 'hover:bg-red-100 dark:hover:bg-red-950 focus:bg-red-100 dark:focus:bg-red-950',
         default => $type,
     };
 @endphp
