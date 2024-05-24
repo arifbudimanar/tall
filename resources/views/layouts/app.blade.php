@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon-48x48.svg') }}">
     <link rel="icon" type="image/svg" sizes="32x32" href="{{ asset('favicon-32x32.svg') }}">
     <link rel="icon" type="image/svg" sizes="16x16" href="{{ asset('favicon-16x16.svg') }}">
