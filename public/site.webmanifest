@@ -31,8 +31,7 @@
     "theme_color": "#09090b",
     "background_color": "#18181b",
     "display_override": [
-        "window-controls-overlay",
-        "minimal-ui"
+        "window-controls-overlay"
     ],
     "display": "standalone"
 }
