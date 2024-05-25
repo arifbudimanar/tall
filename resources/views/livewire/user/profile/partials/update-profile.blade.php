@@ -16,13 +16,11 @@
                     autocomplete="email" placeholder="{{ __('example@mail.com') }}" />
                 @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
                     <x-button.secondary wire:click="sendEmailVerification" loading="sendEmailVerification"
-                        wire:loading.attr="disabled" type="button" class="sm:hidden shrink-0">
-                        <x-slot:icon>
-                            <x-icon.send class="w-5 h-5" />
-                        </x-slot:icon>
+                        wire:loading.attr="disabled" type="button" class="sm:hidden">
+                        <x-icon.send class="w-5 h-5" wire:loading.class="hidden" wire:target="sendEmailVerification" />
                     </x-button.secondary>
                     <x-button.secondary wire:click="sendEmailVerification" loading="sendEmailVerification"
-                        wire:loading.attr="disabled" :title="__('Verify')" type="button" class="hidden sm:flex shrink-0">
+                        wire:loading.attr="disabled" :title="__('Verify')" type="button" class="hidden sm:flex">
                         <x-slot:icon>
                             <x-icon.send class="w-5 h-5" />
                         </x-slot:icon>
