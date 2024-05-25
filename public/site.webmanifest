@@ -1,0 +1,38 @@
+{
+    "name": "Lali Pro",
+    "short_name": "Lali Pro",
+    "description": "A TALL Stack boilerplate with minimalist design, ready to boost your web app development journey.",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/favicon-16x16-dark.svg",
+            "sizes": "16x16",
+            "type": "image/svg"
+        },
+        {
+            "src": "/favicon-32x32-dark.svg",
+            "sizes": "32x32",
+            "type": "image/svg"
+        },
+        {
+            "src": "/favicon-48x48-dark.svg",
+            "sizes": "48x48",
+            "type": "image/svg",
+            "form_factor": "mobile"
+        },
+        {
+            "src": "/favicon-180x180-dark.svg",
+            "sizes": "180x180",
+            "type": "image/svg",
+            "form_factor": "desktop",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#09090b",
+    "background_color": "#18181b",
+    "display_override": [
+        "window-controls-overlay",
+        "minimal-ui"
+    ],
+    "display": "standalone"
+}

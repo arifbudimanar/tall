@@ -11,27 +11,31 @@
         {{-- Email --}}
         <div>
             <x-input.label for="email" :value="__('Email')" required />
-            <x-input.text id="email" type="text" class="block w-full mt-1" wire:model="email" required
-                autocomplete="email" placeholder="{{ __('example@mail.com') }}" />
+            <div class="flex mt-1 space-x-2">
+                <x-input.text id="email" type="text" class="block w-full" wire:model="email" required
+                    autocomplete="email" placeholder="{{ __('example@mail.com') }}" />
+                @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
+                    <x-button.secondary wire:click="sendEmailVerification" loading="sendEmailVerification"
+                        wire:loading.attr="disabled" type="button" class="sm:hidden shrink-0">
+                        <x-slot:icon>
+                            <x-icon.send class="w-5 h-5" />
+                        </x-slot:icon>
+                    </x-button.secondary>
+                    <x-button.secondary wire:click="sendEmailVerification" loading="sendEmailVerification"
+                        wire:loading.attr="disabled" :title="__('Verify')" type="button" class="hidden sm:flex shrink-0">
+                        <x-slot:icon>
+                            <x-icon.send class="w-5 h-5" />
+                        </x-slot:icon>
+                    </x-button.secondary>
+                @endif
+            </div>
             <x-input.error for="email" class="mt-2" />
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
                 <div class="mt-2">
-                    <p class="mt-2 text-sm dark:text-white">
+                    <p class="text-sm text-red-600 dark:text-red-400">
                         {{ __('Your email address is unverified.') }}
-
-                        <button type="button"
-                            class="text-sm underline rounded-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-zinc-800"
-                            wire:click="sendEmailVerification" wire:loading.attr="disabled">
-                            {{ __('Click here to re-send the verification email.') }}
-                        </button>
                     </p>
-
-                    @if (session('resent'))
-                        <p class="mt-2 text-sm font-medium text-green-600 dark:text-green-400">
-                            {{ __('A new verification link has been sent to your email address.') }}
-                        </p>
-                    @endif
                 </div>
             @endif
         </div>
