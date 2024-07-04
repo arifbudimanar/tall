@@ -54,6 +54,10 @@ use Illuminate\Notifications\Notifiable;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereGoogleToken($value)
  * @method static Builder|User search(string $search)
  *
+ * @property string|null $github_username
+ *
+ * @method static Builder|User whereGithubUsername($value)
+ *
  * @mixin \Eloquent
  */
 class User extends Authenticatable implements MustVerifyEmail
