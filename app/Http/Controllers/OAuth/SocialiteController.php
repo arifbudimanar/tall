@@ -72,6 +72,7 @@ class SocialiteController extends Controller
             'email' => $githubUser->email,
             'github_id' => $githubUser->id,
             'github_name' => $githubUser->name,
+            'github_username' => $githubUser->nickname,
             'github_token' => $githubUser->token,
             'github_refresh_token' => $githubUser->refreshToken,
         ]);

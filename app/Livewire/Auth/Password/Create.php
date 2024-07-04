@@ -20,6 +20,8 @@ class Create extends Component
 
     public ?string $github_name;
 
+    public ?string $github_username;
+
     public ?string $github_token;
 
     public ?string $github_refresh_token;
@@ -44,6 +46,7 @@ class Create extends Component
         $this->email = request()->query('email');
         $this->github_id = request()->query('github_id');
         $this->github_name = request()->query('github_name');
+        $this->github_username = request()->query('github_username');
         $this->github_token = request()->query('github_token');
         $this->github_refresh_token = request()->query('github_refresh_token');
         $this->google_id = request()->query('google_id');
@@ -59,6 +62,7 @@ class Create extends Component
             'email' => ['required', 'email', 'max:255'],
             'github_id' => ['nullable'],
             'github_name' => ['nullable'],
+            'github_username' => ['nullable'],
             'github_token' => ['nullable'],
             'github_refresh_token' => ['nullable'],
             'google_id' => ['nullable'],
@@ -79,6 +83,7 @@ class Create extends Component
             'email' => $this->email,
             'github_id' => $this->github_id ?? null,
             'github_name' => $this->github_name ?? null,
+            'github_username' => $this->github_username ?? null,
             'github_token' => $this->github_token ?? null,
             'github_refresh_token' => $this->github_refresh_token ?? null,
             'google_id' => $this->google_id ?? null,

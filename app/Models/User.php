@@ -67,6 +67,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'github_id',
         'github_name',
+        'github_username',
         'github_token',
         'github_refresh_token',
         'google_id',
@@ -79,6 +80,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'remember_token',
         'github_id',
+        'github_name',
+        'github_username',
         'github_token',
         'github_refresh_token',
         'google_id',
@@ -118,7 +121,10 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     public function hasGithubAccount(): bool
     {
-        return $this->github_id !== null && $this->github_name !== null && $this->github_token !== null;
+        return $this->github_id !== null
+        && $this->github_name !== null
+        && $this->github_username !== null
+        && $this->github_token !== null;
     }
 
     /**
@@ -126,6 +132,8 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     public function hasGoogleAccount(): bool
     {
-        return $this->google_id !== null && $this->google_name !== null && $this->google_token !== null;
+        return $this->google_id !== null
+        && $this->google_name !== null
+        && $this->google_token !== null;
     }
 }

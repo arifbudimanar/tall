@@ -24,8 +24,8 @@
         {{-- Terms and policy --}}
         <div class="mt-4">
             <div class="flex items-center">
-                <x-input.checkbox required name="terms" id="terms"
-                    wire:model="terms_of_service_and_privacy_policy" />
+                <x-input.checkbox required name="terms_of_service_and_privacy_policy"
+                    id="terms_of_service_and_privacy_policy" wire:model="terms_of_service_and_privacy_policy" />
                 <x-input.label for="terms_of_service_and_privacy_policy" class="ml-2" required>
                     {!! __('I agree to the :terms_of_service and :privacy_policy', [
                         'terms_of_service' =>
